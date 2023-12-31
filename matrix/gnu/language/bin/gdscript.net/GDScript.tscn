@@ -1,0 +1,340 @@
+[gd_scene load_steps=27 format=3 uid="uid://d2ksahfuc87uo"]
+
+[ext_resource type="Script" path="res://GDScript.gd" id="1_xta58"]
+[ext_resource type="Script" path="res://Matrix.gd" id="2_ojjse"]
+[ext_resource type="Curve" uid="uid://bvpa5l7y1r8fr" path="res://GDScript.tres" id="3_eoe0r"]
+[ext_resource type="Script" path="res://GNU.gd" id="4_anfuj"]
+[ext_resource type="Script" path="res://Popup.gd" id="5_2nd6h"]
+[ext_resource type="Script" path="res://PopupMenu.gd" id="6_awd82"]
+[ext_resource type="Script" path="res://PopupPanel.gd" id="7_ee4n2"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2rva0"]
+
+[sub_resource type="World3D" id="World3D_285a0"]
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_5n0cw"]
+
+[sub_resource type="Theme" id="Theme_nvlfm"]
+
+[sub_resource type="FontFile" id="FontFile_lmppt"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_k6wuk"]
+viewport_path = NodePath("Matrix")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwjks"]
+
+[sub_resource type="World3D" id="World3D_otqrn"]
+
+[sub_resource type="Curve" id="Curve_hhmth"]
+
+[sub_resource type="Curve" id="Curve_1nnlf"]
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_6jv7o"]
+resource_local_to_scene = true
+curve_x = SubResource("Curve_hhmth")
+curve_y = ExtResource("3_eoe0r")
+curve_z = SubResource("Curve_1nnlf")
+
+[sub_resource type="Theme" id="Theme_ysqm7"]
+
+[sub_resource type="World3D" id="World3D_y6y3s"]
+
+[sub_resource type="MeshTexture" id="MeshTexture_q0yxp"]
+
+[sub_resource type="Theme" id="Theme_7hh78"]
+
+[sub_resource type="Theme" id="Theme_eyg8q"]
+
+[sub_resource type="World3D" id="World3D_jmikl"]
+
+[sub_resource type="Theme" id="Theme_dc8h7"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_gx6yo"]
+
+[node name="GDScript" type="Node2D"]
+process_mode = 3
+process_priority = 512
+process_physics_priority = 512
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+show_behind_parent = true
+top_level = true
+clip_children = 2
+y_sort_enabled = true
+material = SubResource("CanvasItemMaterial_2rva0")
+use_parent_material = true
+script = ExtResource("1_xta58")
+
+[node name="Matrix" type="Window" parent="."]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+disable_3d = true
+use_xr = true
+own_world_3d = true
+world_3d = SubResource("World3D_285a0")
+transparent_bg = true
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+msaa_2d = 1
+msaa_3d = 1
+screen_space_aa = 1
+use_taa = true
+use_debanding = true
+use_occlusion_culling = true
+debug_draw = 1
+use_hdr_2d = true
+scaling_3d_mode = 2
+vrs_mode = 1
+vrs_texture = SubResource("CurveXYZTexture_5n0cw")
+canvas_item_default_texture_filter = 2
+canvas_item_default_texture_repeat = 1
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+gui_embed_subwindows = true
+visible = false
+wrap_controls = true
+transient = true
+exclusive = true
+unresizable = true
+borderless = true
+always_on_top = true
+transparent = true
+unfocusable = true
+popup_window = true
+extend_to_title = true
+mouse_passthrough = true
+keep_title_visible = true
+content_scale_mode = 2
+content_scale_aspect = 1
+theme = SubResource("Theme_nvlfm")
+theme_override_colors/title_color = Color(0, 0, 0, 1)
+theme_override_colors/title_outline_modulate = Color(0, 0, 0, 1)
+theme_override_constants/title_outline_size = 0
+theme_override_constants/title_height = 0
+theme_override_constants/resize_margin = 0
+theme_override_constants/close_h_offset = 0
+theme_override_constants/close_v_offset = 0
+theme_override_fonts/title_font = SubResource("FontFile_lmppt")
+theme_override_font_sizes/title_font_size = 0
+theme_override_icons/close = SubResource("ViewportTexture_k6wuk")
+theme_override_icons/close_pressed = SubResource("AtlasTexture_xwjks")
+script = ExtResource("2_ojjse")
+
+[node name="GNU" type="AcceptDialog" parent="."]
+process_mode = 3
+process_priority = 512
+process_physics_priority = 512
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+disable_3d = true
+use_xr = true
+own_world_3d = true
+world_3d = SubResource("World3D_otqrn")
+transparent_bg = true
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+msaa_2d = 1
+msaa_3d = 1
+screen_space_aa = 1
+use_taa = true
+use_debanding = true
+use_occlusion_culling = true
+debug_draw = 1
+use_hdr_2d = true
+scaling_3d_mode = 2
+vrs_mode = 1
+vrs_texture = SubResource("CurveXYZTexture_6jv7o")
+canvas_item_default_texture_filter = 2
+canvas_item_default_texture_repeat = 1
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+gui_embed_subwindows = true
+unresizable = true
+borderless = true
+always_on_top = true
+transparent = true
+unfocusable = true
+popup_window = true
+extend_to_title = true
+mouse_passthrough = true
+content_scale_mode = 1
+content_scale_aspect = 2
+theme = SubResource("Theme_ysqm7")
+dialog_autowrap = true
+script = ExtResource("4_anfuj")
+
+[node name="Language" type="ConfirmationDialog" parent="GNU"]
+process_mode = 3
+process_priority = 512
+process_physics_priority = 512
+disable_3d = true
+use_xr = true
+own_world_3d = true
+world_3d = SubResource("World3D_y6y3s")
+transparent_bg = true
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+msaa_2d = 1
+msaa_3d = 1
+screen_space_aa = 1
+use_taa = true
+use_debanding = true
+use_occlusion_culling = true
+debug_draw = 1
+use_hdr_2d = true
+scaling_3d_mode = 2
+vrs_mode = 1
+vrs_texture = SubResource("MeshTexture_q0yxp")
+canvas_item_default_texture_filter = 2
+canvas_item_default_texture_repeat = 1
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+gui_embed_subwindows = true
+positional_shadow_atlas_quad_0 = 5
+positional_shadow_atlas_quad_1 = 5
+positional_shadow_atlas_quad_2 = 5
+positional_shadow_atlas_quad_3 = 5
+unresizable = true
+borderless = true
+always_on_top = true
+transparent = true
+unfocusable = true
+popup_window = true
+extend_to_title = true
+mouse_passthrough = true
+content_scale_mode = 1
+content_scale_aspect = 3
+theme = SubResource("Theme_7hh78")
+
+[node name="GdScriptNet" type="FileDialog" parent="GNU/Language"]
+
+[node name="Popup" type="Popup" parent="GNU"]
+process_mode = 3
+process_priority = 512
+process_physics_priority = 512
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+disable_3d = true
+use_xr = true
+own_world_3d = true
+transparent_bg = true
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+msaa_2d = 1
+msaa_3d = 1
+screen_space_aa = 1
+use_taa = true
+use_debanding = true
+use_occlusion_culling = true
+debug_draw = 1
+use_hdr_2d = true
+scaling_3d_mode = 1
+vrs_mode = 3
+canvas_item_default_texture_filter = 2
+canvas_item_default_texture_repeat = 1
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+gui_embed_subwindows = true
+positional_shadow_atlas_quad_0 = 5
+positional_shadow_atlas_quad_1 = 5
+positional_shadow_atlas_quad_2 = 5
+positional_shadow_atlas_quad_3 = 5
+always_on_top = true
+transparent = true
+extend_to_title = true
+mouse_passthrough = true
+content_scale_mode = 1
+content_scale_aspect = 4
+content_scale_stretch = 1
+theme = SubResource("Theme_eyg8q")
+script = ExtResource("5_2nd6h")
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+process_mode = 3
+process_priority = 512
+process_physics_priority = 512
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+disable_3d = true
+use_xr = true
+own_world_3d = true
+world_3d = SubResource("World3D_jmikl")
+transparent_bg = true
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+msaa_2d = 1
+msaa_3d = 1
+screen_space_aa = 1
+use_taa = true
+use_debanding = true
+use_occlusion_culling = true
+debug_draw = 1
+use_hdr_2d = true
+scaling_3d_mode = 2
+vrs_mode = 3
+canvas_item_default_texture_filter = 2
+canvas_item_default_texture_repeat = 1
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+gui_embed_subwindows = true
+positional_shadow_atlas_quad_0 = 4
+positional_shadow_atlas_quad_1 = 4
+positional_shadow_atlas_quad_2 = 4
+always_on_top = true
+transparent = true
+extend_to_title = true
+mouse_passthrough = true
+keep_title_visible = true
+hide_on_state_item_selection = true
+script = ExtResource("6_awd82")
+
+[node name="PopupPanel" type="PopupPanel" parent="."]
+process_mode = 3
+process_priority = 512
+process_physics_priority = 512
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+use_xr = true
+own_world_3d = true
+transparent_bg = true
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+msaa_2d = 1
+msaa_3d = 1
+screen_space_aa = 1
+use_taa = true
+use_debanding = true
+use_occlusion_culling = true
+debug_draw = 1
+use_hdr_2d = true
+scaling_3d_mode = 2
+vrs_mode = 3
+canvas_item_default_texture_filter = 2
+canvas_item_default_texture_repeat = 1
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+gui_embed_subwindows = true
+always_on_top = true
+transparent = true
+extend_to_title = true
+mouse_passthrough = true
+keep_title_visible = true
+content_scale_mode = 1
+content_scale_aspect = 4
+content_scale_stretch = 1
+theme = SubResource("Theme_dc8h7")
+theme_override_styles/panel = SubResource("StyleBoxLine_gx6yo")
+script = ExtResource("7_ee4n2")
